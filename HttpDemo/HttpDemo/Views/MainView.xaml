@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms" 
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:controls="clr-namespace:HttpDemo.Controls" 
+             x:Class="HttpDemo.Views.MainView">
+    <Grid Margin="20">
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="Auto"/>
+            <ColumnDefinition Width="*"/>
+            <ColumnDefinition Width="*"/>
+            <ColumnDefinition Width="*"/>
+        </Grid.ColumnDefinitions>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
+        </Grid.RowDefinitions>
+        <controls:CustomChart Grid.Row="0" Grid.ColumnSpan="4" ItemSource="{Binding ChartData}" ChartType="{Binding ChartType}"/>
+        <Button Grid.Row="2" Grid.ColumnSpan="4" Text="Clear Graph" Style="{x:StaticResource buttonStyle}" Command="{Binding ResetGraphUICommand}"/>
+        <Label Grid.Row="3" Grid.Column="0" Text="Disposable" Margin="5"/>
+        <Label Grid.Row="3" Grid.Column="1" Text="Last" Margin="5"/>
+        <Label Grid.Row="3" Grid.Column="2" Text="Mean" Margin="5"/>
+        <Label Grid.Row="3" Grid.Column="3" Text="Calls" Margin="5"/>
+        <Label Grid.Row="4" Grid.Column="0" Text="Get" Margin="5" TextColor="#f44141"/>
+        <Label Grid.Row="4" Grid.Column="1" Text="{Binding LastDisposableTimeGet}" Margin="5"/>
+        <Label Grid.Row="4" Grid.Column="2" Text="{Binding MeanDisposableTimeGet, StringFormat='{0:0}'}" Margin="5"/>
+        <Label Grid.Row="4" Grid.Column="3" Text="{Binding CountDisposableTimeGet}" Margin="5"/>
+        <Label Grid.Row="5" Grid.Column="0" Text="Post" Margin="5" TextColor="#f441e5"/>
+        <Label Grid.Row="5" Grid.Column="1" Text="{Binding LastDisposableTimePost}" Margin="5"/>
+        <Label Grid.Row="5" Grid.Column="2" Text="{Binding MeanDisposableTimePost, StringFormat='{0:0}'}" Margin="5"/>
+        <Label Grid.Row="5" Grid.Column="3" Text="{Binding CountDisposableTimePost}" Margin="5"/>
+        <Label Grid.Row="6" Grid.Column="0" Text="Singleton" Margin="5"/>
+        <Label Grid.Row="6" Grid.Column="1" Text="Last" Margin="5"/>
+        <Label Grid.Row="6" Grid.Column="2" Text="Mean" Margin="5"/>
+        <Label Grid.Row="6" Grid.Column="3" Text="Calls" Margin="5"/>
+        <Label Grid.Row="7" Grid.Column="0" Text="Get" Margin="5" TextColor="#90D585"/>
+        <Label Grid.Row="7" Grid.Column="1" Text="{Binding LastSingletonTimeGet}" Margin="5"/>
+        <Label Grid.Row="7" Grid.Column="2" Text="{Binding MeanSingletonTimeGet, StringFormat='{0:0}'}" Margin="5"/>
+        <Label Grid.Row="7" Grid.Column="3" Text="{Binding CountSingletonTimeGet}" Margin="5"/>
+        <Label Grid.Row="8" Grid.Column="0" Text="Post" Margin="5" TextColor="#4286f4"/>
+        <Label Grid.Row="8" Grid.Column="1" Text="{Binding LastSingletonTimePost}" Margin="5"/>
+        <Label Grid.Row="8" Grid.Column="2" Text="{Binding MeanSingletonTimePost, StringFormat='{0:0}'}" Margin="5"/>
+        <Label Grid.Row="8" Grid.Column="3" Text="{Binding CountSingletonTimePost}" Margin="5"/>
+    </Grid>
+</ContentPage>
