@@ -23,7 +23,6 @@
             <RowDefinition Height="Auto"/>
         </Grid.RowDefinitions>
         <controls:CustomChart Grid.Row="0" Grid.ColumnSpan="4" ItemSource="{Binding ChartData}" ChartType="{Binding ChartType}"/>
-        <Button Grid.Row="2" Grid.ColumnSpan="4" Text="Clear Graph" Style="{x:StaticResource buttonStyle}" Command="{Binding ResetGraphUICommand}"/>
         <Label Grid.Row="3" Grid.Column="0" Text="Disposable" Margin="5"/>
         <Label Grid.Row="3" Grid.Column="1" Text="Last" Margin="5"/>
         <Label Grid.Row="3" Grid.Column="2" Text="Mean" Margin="5"/>

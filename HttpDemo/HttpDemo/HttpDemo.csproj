@@ -37,6 +37,12 @@
     <Reference Include="Microcharts.Forms">
       <HintPath>..\..\..\Microcharts\Sources\Microcharts.Forms\bin\Debug\netstandard1.4\Microcharts.Forms.dll</HintPath>
     </Reference>
+    <Reference Include="Microcharts.Forms">
+      <HintPath>..\Microcharts.Forms.dll</HintPath>
+    </Reference>
+    <Reference Include="Microcharts">
+      <HintPath>..\Microcharts.dll</HintPath>
+    </Reference>
   </ItemGroup>
   <ItemGroup>
     <Compile Remove="Helpers\Command\AsyncCommand.cs" />
